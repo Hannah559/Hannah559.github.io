@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简介 - 刘寒</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        /* 背景色根据主题色调整 */
+     
+
+        .container1 {
+            padding: 80px 20px;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #f799b2; /* 假设主题色为蓝色 */
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .about-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #f799b2; /* 头像边框颜色与主题色一致 */
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text h4 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            font-size: 1.6rem;
+            color: #f799b2; /* 按钮颜色与主题色一致 */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #007bff; /* 鼠标悬停时颜色变化 */
+        }
+
+        .about-footer {
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            margin-top: 40px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .about-photo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .about-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" >
+                    <img class="logo" src="./images/logo.jpg" alt="">
+                    刘寒个人知识库
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index01.html">学习笔记</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index02.html">生活健康</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index03.html">AI日常应用</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index04.html">文献书籍</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index05.html">作品集</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex navbar-form ">
+                        <input class="form-control me-2 " type="search" placeholder="搜索知识..." />
+                        <button class="btn btn-outline-primary " type="submit">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container1" style="margin-top: 30px;" >
+            <h1 class="about-title">关于我</h1>
+            
+            <!-- 个人简介卡片 -->
+            <div class="about-card knowledge-card">
+                <img src="./images/logo.jpg" alt="刘寒" class="about-photo">
+                <div class="about-text">
+                    <h4>个人简介</h4>
+                    <p>
+                       大家好！我是刘寒，性格开朗乐观，对生活充满热情。平时喜欢阅读各类书籍，在文字世界里遨游，不断拓宽知识面。也热衷于户外运动，享受阳光与汗水交织的畅快。我做事认真负责，对待工作和学习都有着积极进取的态度，也很乐意结交新朋友！
+                    </p>
+                  
+                </div>
+            </div>
+
+            <!-- 工作经历卡片 -->
+            <div class="about-card knowledge-card">
+                <h4>工作经历</h4>
+                <p>
+                   获得荣誉：2023年12月获得校级三等奖奖学金；2024年12月获得校级一等奖奖学金以及国家励志奖学金<br/>
+                   专业技能：熟练运用ps、CorelDraw、au、dw、spss等软件<br/>
+                   办公技能：熟练运用excel等office相关软件<br/>
+                   语言技能：大学英语四/六级（CET-4/6），拥有良好的听说读写能力，能够快速浏览英文专业文件及书籍。<br/>
+                   其它技能：驾驶证
+                </p>
+            </div>
+    
+            <!-- 兴趣爱好卡片 -->
+            <div class="about-card knowledge-card">
+                <h4>兴趣爱好</h4>
+                <p>
+                    本人具有较强的学习能力，对于新生事物具备敏锐洞察力，可根据创意脚本或文案进行视频的拍摄与写作。<br/>
+                    新闻采写实务能力较强，能够即时抓住新闻热点深入采访并写稿。<br/>
+                    统筹能力强，有良好的团队合作精神。<br/>
+                </p>
+            </div>
+    
+
+   
+        </div>
+
+                <!-- 页脚 -->
+                <footer class="bg-light py-4 mt-5">
+                    <div class="container text-center">
+                        <p class="mb-0">© 2024 个人知识库. All rights reserved.</p>
+                    </div>
+                </footer>
+    </div>
+
+</body>
+
+</html>

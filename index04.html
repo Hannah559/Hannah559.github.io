@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI日常应用</title>
+    <!-- 新 Bootstrap5 核心 CSS 文件 -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+
+	<!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+	<script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+	<style>
+	
+	
+	</style>
+</head>
+<body>
+<div class="box" >
+        <!-- 导航栏 -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand"  href="index.html" >
+					<img class="logo" src="./images/logo.jpg" alt="">
+					刘寒个人知识库
+				</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index01.html">学习笔记</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index02.html">生活健康</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index03.html">AI日常应用</a>
+                        </li>
+						<li class="nav-item">
+						    <a class="nav-link" href="index04.html">文献书籍</a>
+						</li>
+						<li class="nav-item">
+						    <a class="nav-link" href="index05.html">作品集</a>
+						</li>
+                    </ul>
+                    <form class="d-flex navbar-form ">
+                        <input class="form-control me-2 " type="search" placeholder="搜索知识..." />
+                        <button class="btn btn-outline-primary " type="submit">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+	
+        <!-- 主要内容区 -->
+        <div class="container content" style="margin-top: 100px;">
+		
+            <div class="row">
+                <!-- 左侧分类导航 -->
+                <div class="col-md-3">
+                    <div class="article-list">
+                        <h4>AI日常应用</h4>
+                        <ul id="article-ul" >
+                            <li class="active" ><a href="#"  data-id="0" >热门文章</a></li>
+                            <li><a href="#"  data-id="1" >新闻学</a></li>
+                            <li><a href="#"  data-id="2">传播学</a></li>
+                            <li><a href="#" data-id="3" >网络与新媒体</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- 右侧内容展示 -->
+                <div class="col-md-9">
+                    <!-- 知识卡片区域 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="knowledge-card w-100 ai-card">
+                                <a id="link" href="https://kns.cnki.net/kcms2/article/abstract?v=kz9ikNiCkdrxRz8Vk4YaqHmtiVeDp6NFTp37OqoLN-AGyW6WIOm1FjWs5dkQ63fmSY27N9ueKOSAIv6_TZ8e6emQhGL93mCtWkHsLwtkdTI6Ty6-THXXQ7xUMn0jvpEDPe5kWEc4fQRfoqIEjlUnDEJ425c0VbO73EaI0yodMsnmbKacPcuCowCXihLDWmSe&uniplatform=NZKPT&language=CHS" target="_blank" >热门文章</a>
+                                <div style="margin-top: 20px;" id="text" >摘要：新媒体时代,传统媒体由于外部环境和内部因素双重叠加的作用,其在传播力、引导力、影响力和公信力等方面呈现出逐步下降的趋势。而以网络媒体、社交媒体和自媒体为代表的新媒体,其传播力和影响力虽然较强,但在传播正能量和弘扬主旋律方面却先天不足,其引导力和公信力也比传统媒体更为逊色。传播力、引导力、影响力、公信力构成了新闻舆论的四大生产力要素。对于新闻媒体来说,传播力和引导力是方法和手段,是新闻舆论工作的出发点;影响力和公信力是目的和效果,是新闻舆论工作的落脚点。这四者之间彼此关联、相互作用,实际上已经构成了一个完整的新闻舆论传播理论体系。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <footer class="bg-light py-4 mt-1">
+            <div class="container text-center">
+                <p class="mb-0">© 2024 个人知识库. All rights reserved.</p>
+            </div>
+        </footer>
+</div>
+
+    <script >
+        let list = [
+            {
+                title: '热门文章',
+                desc: '摘要：新媒体时代,传统媒体由于外部环境和内部因素双重叠加的作用,其在传播力、引导力、影响力和公信力等方面呈现出逐步下降的趋势。而以网络媒体、社交媒体和自媒体为代表的新媒体,其传播力和影响力虽然较强,但在传播正能量和弘扬主旋律方面却先天不足,其引导力和公信力也比传统媒体更为逊色。传播力、引导力、影响力、公信力构成了新闻舆论的四大生产力要素。对于新闻媒体来说,传播力和引导力是方法和手段,是新闻舆论工作的出发点;影响力和公信力是目的和效果,是新闻舆论工作的落脚点。这四者之间彼此关联、相互作用,实际上已经构成了一个完整的新闻舆论传播理论体系。',
+                link: 'https://kns.cnki.net/kcms2/article/abstract?v=kz9ikNiCkdrxRz8Vk4YaqHmtiVeDp6NFTp37OqoLN-AGyW6WIOm1FjWs5dkQ63fmSY27N9ueKOSAIv6_TZ8e6emQhGL93mCtWkHsLwtkdTI6Ty6-THXXQ7xUMn0jvpEDPe5kWEc4fQRfoqIEjlUnDEJ425c0VbO73EaI0yodMsnmbKacPcuCowCXihLDWmSe&uniplatform=NZKPT&language=CHS'
+            },
+            {
+                title: '新闻学',
+                desc: '摘要：本文在梳理国内外有关“沉默螺旋”与“反沉默螺旋”研究的基础上，提出了“反沉默螺旋”现象发生的四个条件，指出舆情反转本质上是一种“反沉默螺旋”现象。本文还分析了模型中的中坚分子、信息刺激和时间性三个最重要因素在舆情反转中的作用。',
+                link: 'https://kns.cnki.net/kcms2/article/abstract?v=kz9ikNiCkdrXhwPc04FbIhDVAXcxwDISc_V5KCHBLfMxt5bYXsFEhFt7Lb8BteEaYbofRbHcQvChdPDSW0C0teef9-BkYeYoku8mTChvf_7PyLpzYAdByeWp7OziNZN8pMVvKmQAIrvYCsHh7rfpmYH25n4SFclV7Op0kKcKADa3ZWLPtnDylB7FaN1CrpPK&uniplatform=NZKPT&language=CHS'
+            },
+            {
+                title: '传播学',
+                desc: '摘要：社交媒体的发展带来了全新的社交情境，账号分身成为青年在网络空间自我呈现的新手段。面对无法预计的潜在观众，为了调和社交圈的观点分歧并进行观众隔离，青年将自我分割成截然不同的两面，一面充当形象塑造的传统前台，即大号，强调那些美好的个人特质，争取潜在的资源和发展机会；另一面则是以自由表达为特征的另类前台，即小号，用以抒发不便为外人道的隐秘情绪和真实观点。在分身账号间进行角色切换有利于青年躲避算法定位和平台惩罚。从更为宏观的视野来看，账号分身实际上是社会制约与青年能动实践博弈的结果。社交媒体的发展将社会结构性力量重新施加于个体，而青年通过打造私密的分身账号来实现自身的结构性脱嵌。',
+                link: 'https://kns.cnki.net/kcms2/article/abstract?v=kz9ikNiCkdrajc2D_0Izu_2sQ6hzkZne-U-3LjuOX-_BtAIlLq-8nvpC7iDsN_B0vInf-yUvm1IbSR67w9QQB4M8zx9CVmB_JnVpLCyAs3bQXCmkKukoLV5Rb7o4N4So52mCC6WIJchYl-pv15Ul4-pQnvqG6ScWJTfopyE2CPKZMQMihGqCeYdF4K02irUx&uniplatform=NZKPT&language=CHS'
+            },
+            {
+                title: '网络与新媒体',
+                desc: '摘要：社交媒体的发展带来了全新的社交情境，账号分身成为青年在网络空间自我呈现的新手段。面对无法预计的潜在观众，为了调和社交圈的观点分歧并进行观众隔离，青年将自我分割成截然不同的两面，一面充当形象塑造的传统前台，即大号，强调那些美好的个人特质，争取潜在的资源和发展机会；另一面则是以自由表达为特征的另类前台，即小号，用以抒发不便为外人道的隐秘情绪和真实观点。在分身账号间进行角色切换有利于青年躲避算法定位和平台惩罚。从更为宏观的视野来看，账号分身实际上是社会制约与青年能动实践博弈的结果。社交媒体的发展将社会结构性力量重新施加于个体，而青年通过打造私密的分身账号来实现自身的结构性脱嵌。',
+                link: 'https://kns.cnki.net/kcms2/article/abstract?v=kz9ikNiCkdrajc2D_0Izu_2sQ6hzkZne-U-3LjuOX-_BtAIlLq-8nvpC7iDsN_B0vInf-yUvm1IbSR67w9QQB4M8zx9CVmB_JnVpLCyAs3bQXCmkKukoLV5Rb7o4N4So52mCC6WIJchYl-pv15Ul4-pQnvqG6ScWJTfopyE2CPKZMQMihGqCeYdF4K02irUx&uniplatform=NZKPT&language=CHS'
+            }
+        ]
+        var articleUl = document.getElementById('article-ul')
+        var link = document.getElementById('link')
+        var text = document.getElementById('text')
+        articleUl.onclick = function(e){
+            if(e.target.tagName === 'A') {
+                var data = list[e.target.dataset.id]
+                link.innerText = data.title 
+                link.href = data.link 
+                text.innerText = data.desc
+
+               for(let i = 0; i < articleUl.children.length; i++) {
+                articleUl.children[i].className = ''
+               }
+               e.target.parentNode.className = 'active'
+            }
+        }
+
+
+    </script>
+
+    <!-- Bootstrap JS 和依赖 -->
+ 
+</body>
+</html>

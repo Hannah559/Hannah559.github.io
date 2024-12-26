@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>AI日常应用</title>
+		<!-- 新 Bootstrap5 核心 CSS 文件 -->
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+
+		<!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="./css/index.css">
+		<style>
+			.ai-banner {
+				margin-bottom: 30px;
+				height: 300px;
+				overflow: hidden;
+				border-radius: 12px;
+				position: relative;
+				background: url(./images/1.jpg) top center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<!-- 导航栏 -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		    <div class="container">
+		        <a class="navbar-brand"  href="index.html" >
+					<img class="logo" src="./images/logo.jpg" alt="">
+					刘寒个人知识库
+				</a>
+		        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+		            <span class="navbar-toggler-icon"></span>
+		        </button>
+		        <div class="collapse navbar-collapse" id="navbarNav">
+		            <ul class="navbar-nav me-auto">
+		                <li class="nav-item">
+		                    <a class="nav-link active" href="index.html">首页</a>
+		                </li>
+		                <li class="nav-item">
+		                    <a class="nav-link" href="index01.html">学习笔记</a>
+		                </li>
+		                <li class="nav-item">
+		                    <a class="nav-link" href="index02.html">生活健康</a>
+		                </li>
+		                <li class="nav-item">
+		                    <a class="nav-link" href="index03.html">AI日常应用</a>
+		                </li>
+						<li class="nav-item">
+						    <a class="nav-link" href="index04.html">文献书籍</a>
+						</li>
+						<li class="nav-item">
+						    <a class="nav-link" href="index05.html">作品集</a>
+						</li>
+		            </ul>
+		            <form class="d-flex navbar-form ">
+		                <input class="form-control me-2 " type="search" placeholder="搜索知识..." />
+		                <button class="btn btn-outline-primary " type="submit">搜索</button>
+		            </form>
+		        </div>
+		    </div>
+		</nav>
+
+			<!-- 主要内容区 -->
+			<div class="container content" style="margin-top: 100px;">
+				<!-- 轮播图Banner -->
+				<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+					<!-- 轮播图指示器 -->
+					<div class="carousel-indicators" >
+						<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0"
+							class="active"></button>
+						<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+						<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+						<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+						<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4"></button>
+						<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="5"></button>
+						<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="6"></button>
+						<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="7"></button>
+						<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="8"></button>
+					</div>
+
+					<!-- 轮播图内容 -->
+					<div class="carousel-inner" style="height: 600px">
+						<div class="carousel-item active">
+							<img src="images/11.jpg" class="d-block w-100 h-100" alt="轮播图1" />
+
+						</div>
+						<div class="carousel-item">
+							<img src="images/12.jpg" class="d-block w-100 h-100" alt="轮播图2" />
+
+						</div>
+						<div class="carousel-item">
+							<img src="images/13.jpg" class="d-block w-100 h-100" alt="轮播图3" />
+
+						</div>
+						<div class="carousel-item">
+							<img src="images/14.jpg" class="d-block w-100 h-100" alt="轮播图4" />
+						
+						</div>
+						<div class="carousel-item">
+							<img src="images/15.jpg" class="d-block w-100 h-100" alt="轮播图5" />
+						</div>
+						<div class="carousel-item">
+							<img src="images/16.jpg" class="d-block w-100 h-100" alt="轮播图6" />
+						</div>
+						
+						<div class="carousel-item">
+							<img src="images/17.jpg" class="d-block w-100 h-100" alt="轮播图7" />
+						</div>
+						
+						<div class="carousel-item">
+							<img src="images/18.jpg" class="d-block w-100 h-100" alt="轮播图8" />
+						</div>
+					</div>
+
+					<!-- 轮播图控制按钮 -->
+					<button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+						<span class="visually-hidden">上一张</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#mainCarousel"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon"></span>
+						<span class="visually-hidden">下一张</span>
+					</button>
+				</div>
+
+				<div style="margin-top: 30px;">
+					<div class="row">
+						<!-- 左侧分类导航 -->
+						<div class="col-md-3">
+							<div class="article-list">
+								<h4>作品集</h4>
+								<ul id="article-ul">
+									<li class="active"><a href="#" data-id="0">摄影作品</a></li>
+									<li><a href="#" data-id="1">论文集</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- 右侧内容展示 -->
+						<div class="col-md-9">
+							<!-- 知识卡片区域 -->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="knowledge-card w-100 ai-card">
+										<a id="link"
+											href="https://blog.csdn.net/qq_51116518/article/details/143434146">摄影作品</a>
+										<div id="text"></div>
+										<iframe style="width: 100%;min-height: 1000px;margin-top: 30px;" src="社交媒体小号影响因素研究 1.pdf" frameborder="0"></iframe>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- 页脚 -->
+			<footer class="bg-light py-4 mt-1">
+				<div class="container text-center">
+					<p class="mb-0">© 2024 个人知识库. All rights reserved.</p>
+				</div>
+			</footer>
+		</div>
+
+		<script>
+			let list = [{
+					title: '摄影作品',
+					desc: '摄影作品',
+					link: ''
+				},
+				{
+					title: '作品集',
+					desc: '作品集',
+					link: ''
+				}
+			]
+			var articleUl = document.getElementById('article-ul')
+			var link = document.getElementById('link')
+			var text = document.getElementById('text')
+			articleUl.onclick = function(e) {
+				if (e.target.tagName === 'A') {
+				var data = list[e.target.dataset.id]
+				link.innerText = data.title 
+					for (let i = 0; i < articleUl.children.length; i++) {
+						articleUl.children[i].className = ''
+					}
+					e.target.parentNode.className = 'active'
+				}
+			}
+		</script>
+
+		<!-- Bootstrap JS 和依赖 -->
+
+	</body>
+</html>

@@ -1,0 +1,434 @@
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+	width: 42px;
+	height: 42px;
+}
+
+.box {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    flex: 1;
+}
+
+.navbar {
+    border-bottom: 2px solid #e4e4e4;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, padding 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.navbar:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #f799b2;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+    white-space: nowrap; /* 确保品牌名称不换行 */
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
+.navbar-toggler {
+    margin-left: auto; /* 将按钮推到右侧 */
+}
+.navbar-toggler-icon {
+    background-color: #f799b2;
+}
+.navbar-nav {
+    flex-wrap: nowrap; /* 禁止换行 */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #555;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #f799b2;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navbar-form {
+    display: flex;
+    flex-wrap: nowrap; /* 禁止表单换行 */
+}
+.navbar-form input[type="search"] {
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    padding: 10px 25px;
+    width: 220px;
+    font-size: 0.9rem;
+    transition: width 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    flex: 1; /* 让搜索框自适应 */
+    max-width: 200px; /* 限制搜索框的最大宽度 */
+}
+
+.navbar-form input[type="search"]:focus {
+    width: 280px;
+    border-color: #f799b2;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-form button {
+    border-radius: 30px;
+    background-color: #f799b2;
+    color: white;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0; /* 按钮保持固定大小 */
+
+}
+
+.navbar-form button:hover {
+    background-color: #f799b2;
+    transform: translateY(-2px);
+}
+
+.carousel-inner {
+    max-height: 450px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.carousel-caption:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption h3 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-caption p {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.article-list {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.article-list:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+.article-list h4 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #f799b2;
+    font-size: 1.4rem;
+}
+
+.article-list ul {
+    padding: 0;
+    list-style: none;
+}
+
+.article-list li {
+    margin-bottom: 15px;
+    transition: padding-left 0.3s ease;
+}
+
+.article-list li:hover {
+    padding-left: 15px;
+}
+
+.article-list a {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.article-list .active a {
+    color: #f799b2;
+}
+
+.article-list a:hover {
+    color: #f799b2;
+    padding-left: 15px;
+}
+
+.knowledge-card {
+    border: 1px solid #f1f1f1;
+    border-radius: 12px;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.knowledge-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.knowledge-card h5 {
+    font-size: 24px;
+    color: #f799b2;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.knowledge-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.knowledge-card .btn {
+    border-radius: 30px;
+    padding: 12px 28px;
+    background-color: #f799b2;
+	border-color: #f799b2;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.knowledge-card .btn:hover {
+    background-color: #ff8eac;
+    transform: translateY(-3px);
+}
+.knowledge-card  .btn:active {
+	border-color: #f799b2 !important;
+}
+.list-group-item {
+    border: none;
+    padding: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f9f9f9;
+    transform: translateX(5px);
+}
+
+.divider {
+    position: relative;
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin: 50px auto;
+    border-top: 1px solid #e1e4e8;
+    width: 350px;
+	margin: 30px 0;
+}
+
+.divider_text {
+    position: absolute;
+    background-color: #f7f9fc;
+    left: 20px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0 10px;
+	font-weight: bold;
+    color: #2980b9;
+	font-size: 1.2em;
+	z-index: 1;
+	text-align: center;
+}
+
+.divider:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid #2980b9;
+    z-index: 0;
+}
+
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e1e4e8;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #777;
+}
+
+.backtop {
+    right: 40px;
+    bottom: 40px;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    background-color: #f799b2;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.backtop:hover {
+    background-color: #f799b2;
+    transform: translateY(-3px);
+}
+
+
+/* 右侧内容展示 */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.card-body {
+    font-size: 1.1em;
+    color: #34495e;
+}
+
+
+
+/* 图片样式 */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+/* 描述文本 */
+.card-body div {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-form input[type="search"] {
+        width: 200px;
+    }
+
+    .navbar-form button {
+        font-size: 14px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 24px;
+    }
+
+    .carousel-caption p {
+        font-size: 18px;
+    }
+
+    .article-list {
+        margin-top: 20px;
+    }
+
+    .knowledge-card {
+        margin-bottom: 20px;
+    }
+
+    .backtop {
+        right: 20px;
+        bottom: 20px;
+    }
+	.row {
+	    flex-direction: column;
+	}
+	
+	.col-md-3, .col-md-9 {
+	    width: 100%;
+	}
+	
+	.card {
+	    margin-top: 20px;
+	}
+	
+	.divider {
+	    margin: 20px 0;
+	}
+    
+}
+
+
+			/* 回到顶部按钮 */
+			.backtop {
+				position: fixed;
+				right: 40px;
+				bottom: 40px;
+				width: 60px;
+				height: 60px;
+				background-color: #ff8eac;
+				color: white;
+				text-align: center;
+				line-height: 60px;
+				border-radius: 50%;
+				box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+				cursor: pointer;
+				font-size: 1.5rem;
+				transition: background-color 0.3s ease, transform 0.3s ease;
+			}
+
+			.backtop:hover {
+				background-color: #f799b2;
+				transform: translateY(-3px);
+			}

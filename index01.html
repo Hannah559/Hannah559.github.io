@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>个人知识库</title>
+	<!-- Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<!-- 自定义 CSS 样式 -->
+	<link rel="stylesheet" href="./css/index.css" />
+
+	<style>
+		/* 全局样式 */
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background-color: #f7f9fc;
+			color: #333;
+			line-height: 1.6;
+		}
+
+		/* 卡片样式 */
+		.card-box {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			margin-bottom: 40px;
+		}
+
+		.card-box-l,
+		.card-box-r,
+		.card-box-b {
+			background: #fff;
+			border: 1px solid #e1e4e8;
+			border-radius: 10px;
+			box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+			/* 提升立体感 */
+			padding: 25px;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			overflow: hidden;
+		}
+
+		.card-box-l {
+			width: 250px;
+		}
+
+		.card-box-r {
+			flex: 1;
+			margin-left: 20px;
+		}
+
+		.card-box-b {
+			margin-top: 20px;
+		}
+
+		/* 优化列表样式 */
+		.card-box-l ul {
+			padding-left: 20px;
+		}
+
+		.card-box-l ul li {
+			margin-bottom: 10px;
+			font-size: 1.1rem;
+			line-height: 1.7;
+			transition: color 0.3s ease;
+		}
+
+		.card-box-l ul li::marker {
+			color: #f799b2;
+		}
+
+		.card-box-l ul li a {
+			color: #333;
+			font-weight: 500;
+			text-decoration: none;
+			transition: color 0.3s ease, padding-left 0.3s ease;
+		}
+
+		.card-box-l ul li a:hover {
+			color: #f799b2;
+			padding-left: 10px;
+		}
+
+		/* 卡片标题样式 */
+		.card-box-title {
+			font-size: 1.4rem;
+			font-weight: 700;
+			text-align: center;
+			margin-bottom: 25px;
+			color: #333;
+			letter-spacing: 1px;
+		}
+
+		/* 卡片内容 */
+		.card-box-r-content {
+			font-size: 1rem;
+			color: #555;
+			line-height: 1.8;
+			padding: 10px 20px;
+		}
+
+		/* Hover 效果 */
+		.card-box-l:hover,
+		.card-box-r:hover,
+		.card-box-b:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+		}
+
+		/* 按钮样式 */
+		.card-box-r-content button {
+			background-color: #f799b2;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 25px;
+			font-size: 1rem;
+			font-weight: 600;
+			cursor: pointer;
+			transition: background-color 0.3s ease, transform 0.3s ease;
+		}
+
+		.card-box-r-content button:hover {
+			background-color: #ff8eac;
+			transform: translateY(-3px);
+		}
+
+		/* 分隔线样式 */
+		.divider {
+			position: relative;
+			display: block;
+			height: 1px;
+			width: 100%;
+			margin: 50px auto;
+			border-top: 1px solid #e1e4e8;
+		}
+
+
+		/* 优化表单样式 */
+		.navbar-form input[type="search"] {
+			border-radius: 30px;
+			border: 1px solid #ddd;
+			padding: 12px 25px;
+			width: 250px;
+			font-size: 1rem;
+			transition: width 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.navbar-form input[type="search"]:focus {
+			width: 300px;
+			border-color: #f799b2;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+		}
+
+		.navbar-form button {
+			border-radius: 30px;
+			background-color: #f799b2;
+			color: white;
+			padding: 12px 30px;
+			font-size: 1rem;
+			font-weight: 600;
+			border: none;
+			transition: background-color 0.3s ease, transform 0.3s ease;
+		}
+
+		.navbar-form button:hover {
+			background-color: #ff8eac;
+			transform: translateY(-2px);
+		}
+
+		/* 移动端适配 */
+		@media (max-width: 768px) {
+			.card-box {
+				flex-direction: column;
+			}
+
+			.card-box-l {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+
+			.card-box-r {
+				margin-left: 0;
+			}
+
+			.card-box-b {
+				margin-top: 15px;
+			}
+
+			.card-box-title {
+				font-size: 1.2rem;
+				margin-bottom: 15px;
+			}
+
+			.card-box-r-content p {
+				font-size: 1rem;
+			}
+		}
+
+		/* 页脚样式 */
+		footer {
+			background-color: #ffffff;
+			border-top: 1px solid #e1e4e8;
+			box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.05);
+			padding: 30px;
+			text-align: center;
+		}
+
+		footer p {
+			color: #777;
+			font-size: 1rem;
+			margin: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<!-- 导航栏 -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+			<div class="container">
+				<a class="navbar-brand"  href="index.html" >
+					<img class="logo" src="./images/logo.jpg" alt="">
+					刘寒个人知识库
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item active">
+							<a class="nav-link " href="index.html">首页</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index01.html">学习笔记</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index02.html">生活健康</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index03.html">AI日常应用</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index04.html">文献书籍</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index05.html">作品集</a>
+						</li>
+					</ul>
+					<form class="d-flex navbar-form ">
+						<input class="form-control me-2 " type="search" placeholder="搜索知识..." />
+						<button class="btn btn-outline-primary " type="submit">搜索</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+
+		<!-- 主要内容区 -->
+		<div class="container content" style="margin-top: 100px;">
+			<div class="row">
+				<!-- 左侧分类导航 -->
+				<div class="col-md-3"  >
+					<div class="article-list">
+						<h4>学习笔记</h4>
+						<ul  id="article-ul">
+							<li><a href="#dt" data-id="0">思维导图</a></li>
+							<li><a href="#yd" data-id="1">书本阅读</a></li>
+							<li><a href="#bk" data-id="2">播客笔记</a></li>
+							<li><a href="#dy" data-id="3">电影笔记</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 右侧内容展示 -->
+				<div class="col-md-9" id="#dt">
+					<!-- 知识卡片区域 -->
+
+					<div class="card knowledge-card">
+						<div class="card-body mindMap">
+							<img src="./images/5.jpg"
+								alt="" class="img-fluid rounded">
+								<img src="./images/6.jpg"
+									alt="" class="img-fluid rounded">
+						</div>
+					</div>
+
+					<div class="divider" id="yd" >
+						<div class="divider_text">书本阅读</div>
+					</div>
+					<div class=" card-box">
+						<div class="card-box-l">
+							<h2 class="card-box-title">
+								关键词
+							</h2>
+							<ul>
+								<li>风筝</li>
+								<li>救赎</li>
+								<li>友谊</li>
+								<li>背叛</li>
+								<li>阿富汗</li>
+								<li>愧疚</li>
+							</ul>
+						</div>
+						<div class="card-box-r">
+							<h2 class="card-box-title">
+								笔记栏
+							</h2>
+							<div class="card-box-r-content">
+								<p style="text-indent: 2em;">《追风筝的人》以阿富汗为背景，生动展现了阿米尔和哈桑之间复杂又深厚的情谊。哈桑对阿米尔忠诚无比，在斗风筝比赛中，为帮阿米尔追回那只象征荣耀的风筝，他遭遇了可怕的伤害，而阿米尔却因懦弱选择了逃避，这一情节让人揪心且印象深刻。书中阿富汗社会的变迁也刻画得淋漓尽致，从曾经相对和平美好的生活，到战争带来的满目疮痍，人们流离失所，生活发生了天翻地覆的变化。阿米尔也随着生活轨迹的变动，内心一直被年少时对哈桑的背叛所折磨，这份愧疚如影随形。后来阿米尔得知哈桑是自己同父异母的兄弟，他决定踏上救赎之路，回到战火纷飞的阿富汗，去拯救哈桑的儿子索拉博，过程艰难重重，但也展现出他想要弥补过错的决心，让人看到人性在挣扎与成长中的坚韧一面。</p>
+							</div>
+						</div>
+						<div class="card-box-b">
+							<h2 class="card-box-title" style="margin-bottom: 20px;">
+								总结栏
+							</h2>
+							<p style="text-indent: 2em;">读完这本书，内心久久不能平静。它让我深刻体会到人性的复杂，既有懦弱、自私的一面，也有勇敢去面对过错、努力救赎的光辉时刻。阿米尔的经历仿佛是一场心灵的旅程，我们在生活中或许也会有遗憾、有愧疚之事，而像他那样鼓起勇气去弥补，去让自己的内心得到安宁，是一种难能可贵的成长。同时，书里对阿富汗风土人情以及动荡历史的描绘，让我对那个遥远又饱经苦难的国度有了更多的认识与同情，也更加珍惜如今和平稳定的生活环境。
+							</p>
+						</div>
+					</div>
+
+
+
+					<div class="divider" id="bk" >
+						<div class="divider_text">播客笔记</div>
+					</div>
+					<div class=" card-box">
+						<div class="card-box-l">
+							<h2 class="card-box-title">
+								关键词
+							</h2>
+							<ul>
+								<li>人际交往</li>
+								<li>陌生人故事</li>
+								<li>情感连接</li>
+								<li>社会观察</li>
+							</ul>
+						</div>
+						<div class="card-box-r">
+							<h2 class="card-box-title">
+								笔记栏
+							</h2>
+							<div class="card-box-r-content">
+								<p style="text-indent: 2em;" >第一期：与街头艺人的邂逅</p>
+								<p>故事梗概：</p>
+								<p style="text-indent: 2em;" >主播在街头遇到一位弹吉他卖唱的艺人，一开始只是简单地驻足聆听。在聊天过程中，艺人分享了自己为了追求音乐梦想，辞去稳定工作，踏上漂泊之旅的经历。他谈到了在不同城市的街头表演，遇到过形形色色的人，有慷慨解囊给予支持的，也有不理解甚至驱赶他的。
+								</p>
+
+								<p style="text-indent: 2em;" >
+									艺人对音乐的执着令人动容。尽管生活不稳定，有时甚至食不果腹，但他从未想过放弃。他说每次看到路人因为他的音乐而露出笑容或者停下匆忙的脚步，那种满足感是无法用金钱衡量的。
+								</p>
+
+								<p style="text-indent: 2em;" >
+									他提到在冬天的街头表演是最艰难的，手指冻僵却还要拨动琴弦，但那些在寒风中静静听他唱歌的人给了他坚持下去的力量。
+								</p>
+
+								<p style="text-indent: 2em;" >他还分享了一些有趣的听众互动，比如有小朋友跟着他的音乐跳舞，还有老人给他讲述自己年轻时与音乐有关的故事。</p>
+								
+							</div>
+						</div>
+						<div class="card-box-b">
+							<h2 class="card-box-title" style="margin-bottom: 20px;">
+								总结栏
+							</h2>
+							<p style="text-indent: 2em;" >在这个追求稳定和物质的社会，有多少人有勇气为了梦想放弃一切？这位街头艺人的选择虽然看似冒险，但他收获了最纯粹的音乐体验和来自陌生人的善意。
+							</p>
+							<p style="text-indent: 2em;" >我们往往在忙碌的生活中忽略了身边这些有故事的陌生人，他们或许能给我们带来不一样的视角和启发。</p>
+						</div>
+					</div>
+
+
+					<div class="divider" id="dy" >
+						<div class="divider_text">电影笔记</div>
+					</div>
+
+					<div class="card knowledge-card">
+						<div class="card-body mindMap">
+							<img src="./images/7.jpg"
+								alt="" class="img-fluid rounded">
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 页脚 -->
+		<footer class="bg-light py-4 mt-1">
+			<div class="backtop">UP</div>
+			<div class="container text-center">
+				<p class="mb-0">© 2024 个人知识库. All rights reserved.</p>
+			</div>
+		</footer>
+
+	</div>
+	<script>
+		let list = [
+		    {
+		        title: 'kimi',
+		        desc: 'kimi',
+		        link: ''
+		    },
+		    {
+		        title: 'cursor',
+		        desc: 'cursor',
+		        link: ''
+		    },
+		]
+		var link = document.getElementById('link')
+		var text = document.getElementById('text')
+		var articleUl = document.getElementById('article-ul')
+		articleUl.onclick = function(e){
+		    if(e.target.tagName === 'A') {
+		       for(let i = 0; i < articleUl.children.length; i++) {
+		        articleUl.children[i].className = ''
+		       }
+		       e.target.parentNode.className = 'active'
+		    }
+		}
+		
+	// 回到顶部
+	const backtop = document.querySelector(".backtop");
+	backtop.onclick = function() {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
+	};
+	</script>
+	<!-- Bootstrap JS 和依赖 -->
+</body>
+
+</html>

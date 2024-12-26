@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI日常应用</title>
+    <!-- 新 Bootstrap5 核心 CSS 文件 -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+
+	<!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+	<script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+	<style>
+		.ai-banner{
+		 margin-bottom: 30px;
+		 height: 400px;
+		 overflow: hidden;
+		 border-radius: 12px;
+		 position: relative;
+		 background: url(./images/10.jpg) top center;
+		}
+	
+	</style>
+</head>
+<body>
+<div class="box" >
+        <!-- 导航栏 -->
+       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+           <div class="container">
+               <a class="navbar-brand"  href="index.html" >
+       			<img class="logo" src="./images/logo.jpg" alt="">
+       			刘寒个人知识库
+       		</a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                   <ul class="navbar-nav me-auto">
+                       <li class="nav-item">
+                           <a class="nav-link active" href="index.html">首页</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="index01.html">学习笔记</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="index02.html">生活健康</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="index03.html">AI日常应用</a>
+                       </li>
+       				<li class="nav-item">
+       				    <a class="nav-link" href="index04.html">文献书籍</a>
+       				</li>
+       				<li class="nav-item">
+       				    <a class="nav-link" href="index05.html">作品集</a>
+       				</li>
+                   </ul>
+                   <form class="d-flex navbar-form ">
+                       <input class="form-control me-2 " type="search" placeholder="搜索知识..." />
+                       <button class="btn btn-outline-primary " type="submit">搜索</button>
+                   </form>
+               </div>
+           </div>
+       </nav>
+	
+        <!-- 主要内容区 -->
+        <div class="container content" style="margin-top: 100px;">
+			<div class="ai-banner" >
+			</div>
+            <div class="row">
+                <!-- 左侧分类导航 -->
+                <div class="col-md-3">
+                    <div class="article-list">
+                        <h4>AI日常应用</h4>
+                        <ul id="article-ul" >
+                            <li class="active" ><a href="#"  data-id="0" >kimi</a></li>
+                            <li><a href="#"  data-id="1" >cursor</a></li>
+                            <li><a href="#"  data-id="2">Bootstrap</a></li>
+                            <li><a href="#" data-id="3">jQuery</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- 右侧内容展示 -->
+                <div class="col-md-9">
+                    <!-- 知识卡片区域 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="knowledge-card w-100 ai-card">
+                                <a id="link" style="display: block;margin-bottom: 20px;" href="https://www.cursor.com/">kimi</a>
+                                <div id="text" >月之暗面科技有限公司开发的智能助手，具备强大的语言理解和处理能力。它支持中文和英文对话，能够阅读和理解用户上传的多种格式文件，包括TXT、PDF、Word文档、PPT幻灯片和Excel电子表格。Kimi AI还能访问互联网，结合搜索结果为用户提供更全面的回答。此外，它拥有长文本处理能力，可以处理最多20万字的输入和输出，以及200万字的上下文长度，这使得它在处理长篇文档和复杂问题时表现出色。Kimi AI还能进行深度推理和自我反思，模拟人类的思考过程，处理复杂问题。它的应用场景广泛，从学术研究到法律咨询，从技术开发到内容创作，Kimi AI都能提供有效的辅助和支持。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <footer class="bg-light py-4 mt-1">
+            <div class="container text-center">
+                <p class="mb-0">© 2024 个人知识库. All rights reserved.</p>
+            </div>
+        </footer>
+</div>
+
+    <script >
+        let list = [
+            {
+                title: 'kimi',
+                desc: '月之暗面科技有限公司开发的智能助手，具备强大的语言理解和处理能力。它支持中文和英文对话，能够阅读和理解用户上传的多种格式文件，包括TXT、PDF、Word文档、PPT幻灯片和Excel电子表格。Kimi AI还能访问互联网，结合搜索结果为用户提供更全面的回答。此外，它拥有长文本处理能力，可以处理最多20万字的输入和输出，以及200万字的上下文长度，这使得它在处理长篇文档和复杂问题时表现出色。Kimi AI还能进行深度推理和自我反思，模拟人类的思考过程，处理复杂问题。它的应用场景广泛，从学术研究到法律咨询，从技术开发到内容创作，Kimi AI都能提供有效的辅助和支持。',
+                link: 'https://kimi.moonshot.cn/'
+            },
+            {
+                title: 'cursor',
+                desc: 'Cursor是一款集成了AI技术的代码编辑器，它基于VSCode深度定制，支持多种编程语言，并内置了GPT-4等AI模型。其功能有：智能代码补全：Cursor提供强大的自动完成功能，能够预测用户的下一次编辑，并根据上下文智能地提供代码补全建议。代码生成：它可以帮助开发者自动生成代码，优化项目结构，并提供一系列编程相关的智能建议。AI Chat功能：Cursor的对话窗口允许用户使用自然语言与AI进行交流，直接应用AI生成的代码修改到项目中，这得益于Cursor微调的模型，能够输出Git那样的diff格式，精确地修改代码段。等等',
+                link: 'https://www.cursor.com/'
+            },
+            {
+                title: 'Bootstrap',
+                desc: `Bootstrap是一个流行的前端框架，用于开发响应式和移动优先的网站。它提供了一套预定义的HTML和CSS样式，以及JavaScript插件，帮助开发者快速构建美观、功能丰富的网页。以下是Bootstrap的一些核心功能：
+1. 响应式布局：通过栅格系统，Bootstrap可以自动调整内容布局，适配不同屏幕尺寸。
+2. 预制组件：提供按钮、表单、导航栏、卡片等丰富的UI组件，易于定制和扩展。
+3. CSS预处理器支持：支持LESS和SASS，方便进行变量和混合（mixin）的使用，提高样式代码的可维护性。
+4. JavaScript插件：集成了模态框、轮播、下拉菜单等交互组件，简化了动态效果的实现。
+5. 定制化：可以通过SASS变量和JavaScript插件配置，轻松定制Bootstrap以符合项目需求。
+6. 社区支持：拥有活跃的社区，提供丰富的资源和插件，方便开发者扩展功能。`,
+                link: 'https://www.bootcss.com/'
+            },
+            {
+                title: 'jQuery',
+                desc: `jQuery是一个快速、小巧且功能丰富的JavaScript库。它简化了HTML文档遍历和操作、事件处理、动画和Ajax。以下是jQuery的一些核心功能：
+DOM操作：简化DOM元素的选择、事件绑定和属性修改。
+事件处理：提供统一的方法来处理不同浏览器的事件，如点击、滚动和键盘事件。
+动画效果：支持各种动画效果，如淡入淡出、滑动和自定义动画。
+Ajax：简化异步数据交互，使得从服务器获取数据和更新页面内容更加方便。
+兼容性：跨浏览器兼容性良好，支持主流的浏览器。
+插件生态系统：拥有庞大的插件库，可以扩展jQuery的功能。`,
+                link: 'https://jquery.com/'
+            }
+        ]
+        var articleUl = document.getElementById('article-ul')
+        var link = document.getElementById('link')
+        var text = document.getElementById('text')
+        articleUl.onclick = function(e){
+            if(e.target.tagName === 'A') {
+                var data = list[e.target.dataset.id]
+                link.innerText = data.title 
+                text.innerText = data.desc
+
+               for(let i = 0; i < articleUl.children.length; i++) {
+                articleUl.children[i].className = ''
+               }
+               e.target.parentNode.className = 'active'
+            }
+        }
+
+
+    </script>
+
+    <!-- Bootstrap JS 和依赖 -->
+ 
+</body>
+</html>

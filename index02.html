@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>个人知识库</title>
+		<!-- 新 Bootstrap5 核心 CSS 文件 -->
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="./css/index.css" />
+		<style>
+			/* 卡片样式 */
+			.card {
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+				transition: box-shadow 0.3s ease, transform 0.3s ease;
+				background-color: #fff;
+			}
+
+			.card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+			}
+
+			.card-body img {
+				width: 100%;
+				border-bottom: 2px solid #e1e4e8;
+				object-fit: cover;
+				max-height: 300px;
+			}
+
+			.card-body {
+				padding: 20px;
+				font-size: 1rem;
+				color: #555;
+				line-height: 1.8;
+			}
+
+
+
+
+
+			/* 分隔线样式 */
+			.divider {
+				position: relative;
+				margin: 40px 0;
+				border-top: 2px solid #2980b9;
+			}
+
+
+
+
+
+			/* 移动端适配 */
+			@media (max-width: 768px) {
+				.navbar .navbar-nav {
+					text-align: center;
+				}
+
+				.card-body {
+					font-size: 0.95rem;
+				}
+
+				.card img {
+					max-height: 300px;
+					object-fit: cover;
+				}
+
+				.article-list ul li {
+					font-size: 1.1rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<!-- 导航栏 -->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+				<div class="container">
+					<a class="navbar-brand" href="index.html">
+						<img class="logo" src="./images/logo.jpg" alt="Logo" />
+						刘寒个人知识库
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav me-auto">
+							<li class="nav-item"><a class="nav-link active" href="index.html">首页</a></li>
+							<li class="nav-item"><a class="nav-link" href="index01.html">学习笔记</a></li>
+							<li class="nav-item"><a class="nav-link" href="index02.html">生活健康</a></li>
+							<li class="nav-item"><a class="nav-link" href="index03.html">AI日常应用</a></li>
+							<li class="nav-item"><a class="nav-link" href="index04.html">文献书籍</a></li>
+							<li class="nav-item"><a class="nav-link" href="index05.html">作品集</a></li>
+						</ul>
+						<form class="d-flex navbar-form">
+							<input class="form-control me-2" type="search" placeholder="搜索知识..." />
+							<button class="btn btn-outline-primary" type="submit">搜索</button>
+						</form>
+					</div>
+				</div>
+			</nav>
+
+			<!-- 主要内容区 -->
+			<div class="container content" style="margin-top: 100px">
+				<div class="row">
+					<!-- 左侧分类导航 -->
+					<div class="col-md-3">
+						<div class="article-list">
+							<h4>生活健康</h4>
+							<ul id="article-ul">
+								<li class="active"><a href="#interest" data-id="0">兴趣爱好</a></li>
+								<li><a href="#weight" data-id="1">体重变化</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- 右侧内容展示 -->
+					<div class="col-md-9"  id="interest" >
+						<div class="divider">
+							<div class="divider_text">兴趣爱好</div>
+						</div>
+						<div class="card">
+							<div class="card-body">
+								<img src="./images/8.jpg" alt="">
+								<div style="margin-top: 10px;">
+									健身是一种让人充满活力的爱好，它不仅能够塑造强健的体魄，还能提升精神状态。我喜欢健身，因为它帮助我保持健康，增强免疫力，同时还能释放压力。健身过程中，我享受每一次肌肉的伸展和收缩，感受身体逐渐变得更加强壮和灵活。此外，健身也是一种自我挑战，通过设定目标并达成，我能够获得成就感和自信。无论是在健身房举重，还是户外跑步，健身都让我感受到生活的节奏和乐趣。它不仅是一种身体锻炼，更是一种精神上的滋养。
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-body">
+								<img style="width: 100%;height: 100%;" src="./images/9.jpg" alt="">
+								<div style="margin-top: 10px;">
+									音乐剧是我钟爱的一种艺术形式，它将音乐、舞蹈和戏剧完美融合，创造出独特的视听盛宴。我喜欢音乐剧，因为它能够通过生动的表演和旋律，将故事情感深刻地传达给观众。每一场音乐剧都是一次全新的体验，无论是经典如《歌剧魅影》还是现代作品，都能让我沉浸在故事中，感受角色的喜怒哀乐。音乐剧的现场感特别吸引我，舞台上的灯光、服装和布景，加上演员们的精湛表演，总能让我忘记现实，完全投入到那个梦幻般的世界。此外，音乐剧的音乐旋律往往令人难以忘怀，它们能够触动人心，甚至在观剧后仍久久回荡在耳边。总之，音乐剧以其独特的魅力，丰富了我的精神世界，让我在艺术的海洋中找到了乐趣和启迪。
+								</div>
+							</div>
+						</div>
+						<div class="divider" id="weight">
+							<div class="divider_text">体重变化</div>
+						</div>
+						<div class="card">
+							<div class="card-body mindMap">
+								<div style="width: 100%; height: 400px" id="weightChart"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 页脚 -->
+			<footer class="bg-light py-4 mt-1">
+				<div class="backtop">UP</div>
+				<div class="container text-center">
+					<p class="mb-0">© 2024 个人知识库. All rights reserved.</p>
+				</div>
+			</footer>
+		</div>
+
+		<script src="./js/echarts.min.js"></script>
+		<script>
+			let list = [{
+					title: 'kimi',
+					desc: 'kimi',
+					link: ''
+				},
+				{
+					title: 'cursor',
+					desc: 'cursor',
+					link: ''
+				},
+			]
+			var articleUl = document.getElementById('article-ul')
+			articleUl.onclick = function(e) {
+				if (e.target.tagName === 'A') {
+
+					for (let i = 0; i < articleUl.children.length; i++) {
+						articleUl.children[i].className = ''
+					}
+					e.target.parentNode.className = 'active'
+				}
+			}
+			// ECharts 配置及回到顶部功能
+			const ctx = document.getElementById("weightChart");
+			var chart = echarts.init(ctx);
+			var option = {
+				title: {
+					text: "2024年体重变化曲线",
+					left: "center",
+					textStyle: {
+						fontSize: 16
+					}
+				},
+				tooltip: {
+					trigger: "axis"
+				},
+				legend: {
+					data: ["体重 (kg)"],
+					bottom: "0%"
+				},
+				xAxis: {
+					type: "category",
+					data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+					name: "月份",
+					nameLocation: "middle",
+					nameTextStyle: {
+						padding: [15, 0, 0, 0]
+					}
+				},
+				yAxis: {
+					type: "value",
+					name: "体重 (kg)",
+					min: 40,
+					nameTextStyle: {
+						padding: [0, 0, 0, 10]
+					}
+				},
+				series: [{
+					name: "体重 (kg)",
+					type: "line",
+					data: [50,49,48,47,46.5,47,49,49,48.5,48,50,52,50],
+					smooth: true,
+					itemStyle: {
+						color: "rgb(75, 192, 192)"
+					},
+					lineStyle: {
+						width: 2
+					},
+					areaStyle: {
+						opacity: 0
+					}
+				}]
+			};
+			chart.setOption(option);
+
+			// 回到顶部
+			const backtop = document.querySelector(".backtop");
+			backtop.onclick = function() {
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth"
+				});
+			};
+
+			// 监听窗口大小变化，自动调整图表大小
+			window.addEventListener('resize', function() {
+				chart.resize();
+			});
+		</script>
+	</body>
+</html>
